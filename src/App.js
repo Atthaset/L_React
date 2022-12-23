@@ -1,23 +1,12 @@
-import logo from './logo.svg';
-import './App.css';
+import Transaction from "./Component/Transaction";
+import "./App.css"
 
 function App() {
+  const design = { color: "red",textAlign:"center",fontSize:'1.5rem'}
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="Container">
+        <h1 style={design}>โปรแกรมบัญชีรายรับ - รายจ่าย</h1>
+        <Transaction />
     </div>
   );
 }

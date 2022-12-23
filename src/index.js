@@ -2,9 +2,22 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
+//import HellowComponent from './Component/HellowComponent';
 import reportWebVitals from './reportWebVitals';
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
+//การสร้าง Functional Component
+function HellowWorldComponent() {
+    return <h1>HellowWorld</h1>
+}
+
+//การสร้าง Class Component
+class HellowsgigzComponent extends React.Component{
+  render(){
+    return <h1>สวัสดี Component</h1>
+  }
+}
+
+const root = ReactDOM.createRoot(document.getElementById('root'));//เชื่อไปไฟล์ index.html ผ่านไอดี root
 root.render(
   <React.StrictMode>
     <App />
