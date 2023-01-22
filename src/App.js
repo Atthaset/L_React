@@ -23,8 +23,8 @@ function App() {
     const amounts = items.map(items => items.amount)
     const income = amounts.filter(amounts => amounts > 0).reduce((total, amounts) => total += amounts, 0)
     const expense = (amounts.filter(amounts => amounts < 0).reduce((total, amounts) => total += amounts, 0)) * -1
-    setReportIncome(income.toFixed(2))
-    setReportExpense(expense.toFixed(2))
+    setReportIncome(income)
+    setReportExpense(expense)
   }, [items, reportIncome, reportExpense])
   return (
     <DataContext.Provider value={{ income: reportIncome, expense: reportExpense }
